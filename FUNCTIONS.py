@@ -8,6 +8,7 @@ dat=date.strftime("%m/%d")
 holidays=pd.read_csv('Holiday-List.csv', header=None, index_col=0, squeeze=True).to_dict()
 for key,value in holidays.items():
     if (key == dat):
+        displayDate=key
         displayHoliday=value
 
 app = dash.Dash(
@@ -22,8 +23,11 @@ server = app.server
 app.config["suppress_callback_exceptions"] = True
 
 app.layout = html.Div(
-    className="container scalable",
+    className="box",
     children=[
             html.Div(
-            id='',children=[displayHoliday])
+            id='', className="contentBox",children=[
+            html.A(
+            id='', className="content",children=[displayDate,' - ',displayHoliday])
+            ])
             ])
