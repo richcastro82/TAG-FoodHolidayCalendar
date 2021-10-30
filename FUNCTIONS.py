@@ -4,11 +4,11 @@ from LIBRARIES import *
 from datetime import datetime
 date = datetime.now()
 dat=date.strftime("%m/%d")
+displayHoliday='No Holiday'
 
 holidays=pd.read_csv('Holiday-List.csv', header=None, index_col=0, squeeze=True).to_dict()
 for key,value in holidays.items():
     if (key == dat):
-        displayDate=key
         displayHoliday=value
 
 app = dash.Dash(
@@ -28,6 +28,6 @@ app.layout = html.Div(
             html.Div(
             id='', className="contentBox",children=[
             html.A(
-            id='', className="content",children=[displayDate,' - ',displayHoliday])
+            id='', className="content",children=[dat,' - ',displayHoliday])
             ])
             ])
