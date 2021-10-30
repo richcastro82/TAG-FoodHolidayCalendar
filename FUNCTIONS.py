@@ -1,11 +1,13 @@
 #Richard Castro
 #Functions for holiday Topbar
 from LIBRARIES import *
+from datetime import datetime
 df=pd.read_csv('Holiday-List.csv')
 holidays=[]
 
 for i in df.Holiday:
     holidays.append('{}'.format(i))
+date = datetime.now()
 
 app = dash.Dash(
         __name__,
@@ -19,20 +21,10 @@ server = app.server
 app.config["suppress_callback_exceptions"] = True
 
 
-def build_branding():
-    return html.Div()
-
-
 app.layout = html.Div(
     className="container scalable",
     children=[
-            # CLIENT BRANDING ON THE HTML
             html.Div(
-            id='build-branding',children=[
-            dcc.Dropdown(
-                id="", multi=True, searchable=True,
-                options=[{"label": i, "value": i} for i in holidays],
-                value=""
-            )
-            ]),
-],)
+            id='',children=[
+                date.strftime("%m/%d")])
+            ])
