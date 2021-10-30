@@ -2,12 +2,13 @@
 #Functions for holiday Topbar
 from LIBRARIES import *
 from datetime import datetime
-df=pd.read_csv('Holiday-List.csv')
-holidays=[]
-
-for i in df.Holiday:
-    holidays.append('{}'.format(i))
 date = datetime.now()
+dat=date.strftime("%m/%d")
+
+holidays=pd.read_csv('Holiday-List.csv', header=None, index_col=0, squeeze=True).to_dict()
+for key,value in holidays.items():
+    if (key == dat):
+        displayHoliday=value
 
 app = dash.Dash(
         __name__,
@@ -20,11 +21,9 @@ app = dash.Dash(
 server = app.server
 app.config["suppress_callback_exceptions"] = True
 
-
 app.layout = html.Div(
     className="container scalable",
     children=[
             html.Div(
-            id='',children=[
-                date.strftime("%m/%d")])
+            id='',children=[displayHoliday])
             ])
