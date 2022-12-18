@@ -5,7 +5,7 @@ from datetime import datetime
 date = datetime.now().strftime("%m/%d")
 
 
-displayHoliday='no holiday'
+displayHoliday='No Food Holiday today :( Check back tomorrow'
 #Create a python list instead of the single variable above to hold multiple holiday on the same day.
 
 
@@ -30,20 +30,77 @@ server = app.server
 app.config["suppress_callback_exceptions"] = True
 
 
+
 app.layout = html.Div(
-    className="box",
+    className="Content-Box",
     children=[
+
         html.Div(
-        id='',
-        className="contentBox",
-        children=[
-            html.A(
-            id='',
-            className="content",
+            className="Header",
             children=[
-                date,' - ',displayHoliday
-                ]
-            )
-        ])
-    ]
-)
+                html.Div(
+                id='Logo-Box',
+                className="LogoBox",
+                children=[
+                    html.Img(
+                    id='Logo',
+                    className="Logo",
+                    src="assets/logo.png")]),
+
+                html.Div(
+                id='Title-Box',
+                className="titleBox",
+                children=[
+                    html.H2(
+                    id='title',
+                    className="title",
+                    children=["Food Holiday Calendar"])]),
+        ]),
+
+        html.Div(
+            className="Bod",
+            children=[
+                # IMAGE FOR HOLIDAY SOURCED FROM URL LINK IN CSV
+                html.Div(
+                id='Holi-Content-Box',
+                className="HoliBox",
+                children=[
+                    html.Img(
+                    id='HoliImg',
+                    className="HoliImg",
+                    src="assets/cupcake.jpg")]),
+
+        #
+        # # Desccription for holiday from column in csv
+        # html.Div(
+        # id='Title-Box',
+        # className="titleBox",
+        # children=[
+        #     html.H2(
+        #     id='title',
+        #     className="title",
+        #     children=["Food Holiday Calendar"])]),
+        #
+        ])])
+
+
+
+
+
+# app.layout = html.Div(
+#     className="box",
+#     children=[
+#         html.Div(
+#         id='',
+#         className="contentBox",
+#         children=[
+#             html.A(
+#             id='',
+#             className="content",
+#             children=[
+#                 date,' - ',displayHoliday
+#                 ]
+#             )
+#         ])
+#     ]
+# )

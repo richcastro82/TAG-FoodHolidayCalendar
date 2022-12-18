@@ -2,17 +2,49 @@
 .box{
 width:100%;
 }
-.contentBox{
+.Content-Box{
   align-content: center;
   margin:auto;
-  background:#333;
+  background:#ccc;
   padding:20px;
-  display:flex;
+  /* display:flex; */
+  width:800px;
+  height:700px;
 }
-.content{
+
+/* .content{
   margin-top:3px;
   font-size:1.4rem;
   margin:auto;
   color:#fff;
   border-bottom:3px solid #fcb100;
+} */
+
+.Header{height:75px;display:flex;}
+.LogoBox{width:125px;}
+.Logo{width:125px;}
+.titleBox{margin:auto;}
+
+
+.Bod{width:1000px;height:400px;}
+
+.contentImageBox{
+  width:300px;
 }
+
+
+.HoliBox{
+  width:800px;
+  /* margin:auto;
+  height:auto; */
+}
+
+.HoliImg{
+width:800px;
+height:620px;
+}
+
+/* .titleBox{
+  width:400px;
+  float:right;
+} */
