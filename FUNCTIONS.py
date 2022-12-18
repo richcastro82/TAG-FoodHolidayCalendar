@@ -35,27 +35,27 @@ app.layout = html.Div(
     className="Content-Box",
     children=[
 
-        html.Div(
-            className="Header",
-            children=[
-                html.Div(
-                id='Logo-Box',
-                className="LogoBox",
-                children=[
-                    html.Img(
-                    id='Logo',
-                    className="Logo",
-                    src="assets/logo.png")]),
-
-                html.Div(
-                id='Title-Box',
-                className="titleBox",
-                children=[
-                    html.H2(
-                    id='title',
-                    className="title",
-                    children=["Food Holiday Calendar"])]),
-        ]),
+        # html.Div(
+        #     className="Header",
+        #     children=[
+        #         html.Div(
+        #         id='Logo-Box',
+        #         className="LogoBox",
+        #         children=[
+        #             html.Img(
+        #             id='Logo',
+        #             className="Logo",
+        #             src="assets/logo.png")]),
+        #
+        #         html.Div(
+        #         id='Title-Box',
+        #         className="titleBox",
+        #         children=[
+        #             html.H2(
+        #             id='title',
+        #             className="title",
+        #             children=["Food Holiday Calendar"])]),
+        # ]),
 
         html.Div(
             className="Bod",
@@ -81,7 +81,14 @@ app.layout = html.Div(
         #     className="title",
         #     children=["Food Holiday Calendar"])]),
         #
-        ])])
+        ]),html.Div(className="power",children=[
+
+            html.P(className="powerP",children=['Powered by:']),
+            html.Img(className="powerImg", src="assets/logo.png")
+            ])
+
+
+        ])
 
 
 

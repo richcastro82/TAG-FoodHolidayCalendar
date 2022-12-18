@@ -1,6 +1,7 @@
 #Richard Castro
 .box{
 width:100%;
+
 }
 .Content-Box{
   align-content: center;
@@ -26,7 +27,7 @@ width:100%;
 .titleBox{margin:auto;}
 
 
-.Bod{width:1000px;height:400px;}
+.Bod{width:1000px;height:630px;}
 
 .contentImageBox{
   width:300px;
@@ -44,6 +45,23 @@ width:800px;
 height:620px;
 }
 
+
+.power{
+  width:180px;
+  float:right;
+  margin-top:20px;
+}
+
+.powerP{
+  float:left;
+}
+
+.powerImg{
+  padding-left:10px;
+  width:80px;
+  height:35px;
+  float:left;
+}
 /* .titleBox{
   width:400px;
   float:right;
