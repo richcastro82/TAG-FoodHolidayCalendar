@@ -68,7 +68,7 @@ app.layout = html.Div(
                     html.Img(
                     id='HoliImg',
                     className="HoliImg",
-                    src="assets/cupcake.jpg")]),
+                    src="assets/candy1.jpg")]),
 
         #
         # # Desccription for holiday from column in csv

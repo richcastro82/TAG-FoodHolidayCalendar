@@ -9,8 +9,8 @@ width:100%;
   background:#ccc;
   padding:20px;
   /* display:flex; */
-  width:800px;
-  height:700px;
+  width:550px;
+  height:550px;
 }
 
 /* .content{
@@ -27,7 +27,7 @@ width:100%;
 .titleBox{margin:auto;}
 
 
-.Bod{width:1000px;height:630px;}
+.Bod{width:550px;height:600px;}
 
 .contentImageBox{
   width:300px;
@@ -41,8 +41,8 @@ width:100%;
 }
 
 .HoliImg{
-width:800px;
-height:620px;
+width:550px;
+height:550px;
 }
 
 
