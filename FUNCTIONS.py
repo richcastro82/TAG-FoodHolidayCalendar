@@ -61,6 +61,7 @@ app.layout = html.Div(
             className="Bod",
             children=[
                 # IMAGE FOR HOLIDAY SOURCED FROM URL LINK IN CSV
+                # html.Div(children=[displayHoliday]),
                 html.Div(
                 id='Holi-Content-Box',
                 className="HoliBox",
@@ -68,7 +69,7 @@ app.layout = html.Div(
                     html.Img(
                     id='HoliImg',
                     className="HoliImg",
-                    src="assets/candy1.jpg")]),
+                    src=displayHoliday)]),
 
         #
         # # Desccription for holiday from column in csv
